@@ -4,6 +4,8 @@ import { CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import MonthlyMentors from "../SmallComp/MonthlyMentors";
 import UpcomingTasks from "../SmallComp/UpcomingTasks";
+import Calender from "../SmallComp/calender";
+import Task from "../SmallComp/Task";
 
 const Overview = () => {
   return (
@@ -240,7 +242,10 @@ const Overview = () => {
         </div>
       </div>
 
-      <div className="border bg-[#F5F5F7] w-2/6">Overview</div>
+      <div className="border bg-[#F5F5F7] space-y-5 p-6 w-2/6">
+      <Calender/>
+      <Task/>
+      </div>
     </div>
   );
 };
