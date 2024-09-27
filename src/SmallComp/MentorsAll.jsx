@@ -1,12 +1,12 @@
-import React from "react";
-import UpcomingTasks from "./UpcomingTasks";
+import React from 'react'
+import MentorsPer from './MentorsPer'
 
-const TimeLimit = () => {
+const MentorsAll = () => {
   return (
     <div className="p-6 space-y-4">
       <div className="flex justify-between">
         <p className="text-[var(--Secondary-500,#141522)] font-['Plus_Jakarta_Sans'] text-[24px] font-semibold leading-[36px] tracking-[-0.72px]">
-          Time Limit
+          Mentors
         </p>
         <div className="flex gap-2">
           <svg
@@ -53,14 +53,15 @@ const TimeLimit = () => {
           </svg>
         </div>
       </div>
-      <div className="flex gap-2 overflow-x-auto">
-        <UpcomingTasks />
-        <UpcomingTasks /> 
-        <UpcomingTasks />
-        <UpcomingTasks />
+      <div className="grid gap-2 grid-cols-3  overflow-x-auto">
+        <MentorsPer />
+        <MentorsPer />
+        <MentorsPer />
+        <MentorsPer />
+        <MentorsPer />
+        <MentorsPer />
       </div>
-    </div>
-  );
-};
+    </div>  )
+}
 
-export default TimeLimit;
+export default MentorsAll

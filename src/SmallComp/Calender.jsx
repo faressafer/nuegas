@@ -2,7 +2,7 @@ import React from "react";
 
 const Calender = () => {
   return (
-    <div className="w-[372px] h-auto border bg-white rounded-[10px]">
+    <div className="w-full h-auto border bg-white rounded-[10px]">
       <div className=" flex justify-between p-4">
         <svg
           width="24"
