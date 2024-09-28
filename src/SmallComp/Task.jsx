@@ -4,8 +4,8 @@ import { Progress } from "@material-tailwind/react";
 
 const Task = () => {
   return (
-    <div className="border rounded-[10px] p-4 space-y-4 bg-white h-auto">
-      <div className="justify-between flex border">
+    <div className=" rounded-[10px] p-4 space-y-4 bg-white h-auto">
+      <div className="justify-between flex ">
         <p className="text-[var(--Secondary-500,#141522)] font-['Plus_Jakarta_Sans'] text-[14px] font-semibold leading-[21px] tracking-[-0.28px]">
           Todays Task
         </p>
@@ -130,6 +130,9 @@ const Task = () => {
           </p>
         </div>
       </div>
+      <button className="w-full bg-[#546FFF] rounded-[10px] h-[44px]">
+        <span className="text-primary-0 text-center text-white font-semibold text-[14px] leading-[150%] tracking-[-0.28px]">Go To Detail</span>
+      </button>
     </div>
   );
 };
