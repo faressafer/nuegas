@@ -1,12 +1,11 @@
 import React from "react";
 import banner from "../assets/banner.png";
-import { Progress } from "flowbite-react";
-import "flowbite";
+import { Progress } from "@material-tailwind/react";
 
 const UpcomingTasks = () => {
   return (
     <div className="w-1/2 border rounded-[10px] space-y-2 p-4 bg-white h-[314px]">
-      <img src={banner} className="w-full h-[150px]" alt="" />
+      <img src={banner} className="w-full h-[130px]" alt="" />
       <div>
         <p className="text-[#141522] font-semibold text-[16px] leading-[150%] tracking-[-0.32px] font-[Plus Jakarta Sans]">
           Creating Mobile App Design
@@ -15,8 +14,8 @@ const UpcomingTasks = () => {
           UI UX Design
         </p>
       </div>
-      <div className="sapce-y-2">
-        <div className="flex justify-between">
+      <div className="sapce-y-4">
+        <div className="flex justify-between mb-1">
           <p className="text-[#141522] font-medium text-[16px] leading-[1.5] tracking-[-0.32px] font-[Plus Jakarta Sans]">
             Progress
           </p>
@@ -25,11 +24,10 @@ const UpcomingTasks = () => {
           </p>
         </div>
         <Progress
-          progress={75}
-          progressLabelPosition="inside"
-          textLabelPosition="outside"
-          labelProgress
-          className="bg-[#546FFF] h-[10px] rounded-[8px]"
+          value={20}
+          variant="gradient"
+          color="bg-[#BAC8FF]"
+          className="bg-[#BAC8FF] h-[10px] rounded-[8px]"
         />
       </div>
 

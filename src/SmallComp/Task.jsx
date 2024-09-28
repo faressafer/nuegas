@@ -1,7 +1,6 @@
 import React from "react";
 import banner from "../assets/banner.png";
-import { Progress } from "flowbite-react";
-import "flowbite";
+import { Progress } from "@material-tailwind/react";
 
 const Task = () => {
   return (
@@ -59,13 +58,7 @@ const Task = () => {
             75%
           </p>
         </div>
-        <Progress
-          progress={75}
-          progressLabelPosition="inside"
-          textLabelPosition="outside"
-          labelProgress
-          className="bg-[#546FFF] h-[10px] rounded-[8px]"
-        />
+        <Progress value={40} variant="gradient" className="bg-[#546FFF] h-[10px] rounded-[8px]" />
       </div>
       <div className="flex justify-between">
         <div className="flex gap-2 items-center">
@@ -133,7 +126,7 @@ const Task = () => {
             <span>3</span>
           </div>
           <p class="text-[var(--Secondary-500,#141522)] font-['Plus_Jakarta_Sans'] text-[14px] font-medium leading-[21px] tracking-[-0.28px]">
-          Design a mobile application with figma
+            Design a mobile application with figma
           </p>
         </div>
       </div>
