@@ -3,7 +3,7 @@ import Profil from "../assets/Profil.png";
 
 const NavBar = () => {
   return (
-    <div className="border p-4 bg-white w-full h-auto">
+    <div className=" p-4 bg-white w-full h-auto">
       <div className=" flex p-4 justify-between">
         <h2 className="text-[var(--Secondary-500,#141522)] font-['Plus_Jakarta_Sans'] text-[24px] font-semibold leading-[36px] tracking-[-0.72px]">
           Explore Task

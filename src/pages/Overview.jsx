@@ -6,14 +6,103 @@ import MonthlyMentors from "../SmallComp/MonthlyMentors";
 import UpcomingTasks from "../SmallComp/UpcomingTasks";
 import Calender from "../SmallComp/calender";
 import Task from "../SmallComp/Task";
+import {
+  Card,
+  CardBody,
+  CardHeader,
+  Typography,
+} from "@material-tailwind/react";
+import Chart from "react-apexcharts";
+
+const chartConfig = {
+  type: "line",
+  height: 130,
+  series: [
+    {
+      name: "Sales",
+      data: [50, 40, 300, 320, 500, 350, 200, 230, 500],
+    },
+  ],
+  options: {
+    chart: {
+      toolbar: {
+        show: false,
+      },
+    },
+    title: {
+      show: "",
+    },
+    dataLabels: {
+      enabled: false,
+    },
+    colors: ["#020617"],
+    stroke: {
+      lineCap: "round",
+      curve: "smooth",
+    },
+    markers: {
+      size: 0,
+    },
+    xaxis: {
+      axisTicks: {
+        show: false,
+      },
+      axisBorder: {
+        show: false,
+      },
+      labels: {
+        style: {
+          colors: "#616161",
+          fontSize: "12px",
+          fontFamily: "inherit",
+          fontWeight: 400,
+        },
+      },
+      categories: [
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Oct",
+        "Nov",
+        "Dec",
+      ],
+    },
+    yaxis: {
+      labels: {
+        style: {
+          colors: "#616161",
+          fontSize: "12px",
+          fontFamily: "inherit",
+          fontWeight: 400,
+        },
+      },
+    },
+    grid: {
+      show: true,
+      borderColor: "#dddddd",
+      strokeDashArray: 5,
+      xaxis: {
+        lines: {
+          show: true,
+        },
+      },
+    },
+    fill: {
+      opacity: 0.8,
+    },
+  },
+};
 
 const Overview = () => {
   return (
-    <div className="border flex">
-      <div className="border min-h-screen w-4/6 p-6 space-y-4 bg-[#FAFAFA]">
+    <div className=" flex">
+      <div className=" min-h-screen w-4/6 p-6 space-y-4 bg-[#FAFAFA]">
         {/* first section */}
-        <div className="border flex justify-between">
-          <div className="border">
+        <div className=" flex justify-between">
+          <div className="">
             <p class="text-[#141522] text-2xl font-semibold leading-[36px] tracking-[-0.72px]">
               Hi, Skylar Dias
             </p>
@@ -58,7 +147,7 @@ const Overview = () => {
 
         {/* second section */}
         <div className=" flex gap-4 h-[214px]">
-          <div className="w-1/6 border p-4 rounded-[10px] bg-[#141522]">
+          <div className="w-1/6  p-4 rounded-[10px] bg-[#141522]">
             <h3 className="text-white font-inter text-[20px] font-semibold leading-[1.5] tracking-[-0.32px]">
               Running Task
             </h3>
@@ -96,7 +185,7 @@ const Overview = () => {
             </div>
           </div>
           <div className="w-5/6 border rounded-[10px] space-y-4 p-4 bg-[#F5F5F7]">
-            <div className="border flex justify-between">
+            <div className=" flex justify-between">
               <h3 className="text-[#141522] font-semibold text-[16px] leading-[150%] tracking-[-0.32px] font-[Plus Jakarta Sans]">
                 Activity
               </h3>
@@ -127,7 +216,9 @@ const Overview = () => {
                 </svg>
               </div>
             </div>
-            <div className="border w-full h-[130px]"></div>
+            <div className=" bg-white  rounded-[10px] w-full">
+              <Chart {...chartConfig} />
+            </div>
           </div>
         </div>
         <div className="space-y-4">
@@ -236,15 +327,15 @@ const Overview = () => {
             </div>
           </div>
           <div className="flex gap-4">
-            <UpcomingTasks/>
-            <UpcomingTasks/>
+            <UpcomingTasks />
+            <UpcomingTasks />
           </div>
         </div>
       </div>
 
       <div className="border bg-[#F5F5F7] space-y-5 p-6 w-2/6">
-      <Calender/>
-      <Task/>
+        <Calender />
+        <Task />
       </div>
     </div>
   );

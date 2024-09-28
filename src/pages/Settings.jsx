@@ -102,7 +102,7 @@ const Settings = () => {
 
   return (
     <div className="bg-[#FAFAFA] min-h-screen">
-      <NavBarMidium />
+      <NavBarMidium title ="Settings"/>
       <div className="p-6">
         <div className="w-full p-6 space-y-6 bg-white rounded-[10px] h-auto">
           <div className="w-full  gap-2  border-b-2 flex">
